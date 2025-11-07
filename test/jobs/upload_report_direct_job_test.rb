@@ -294,7 +294,6 @@ class UploadReportDirectJobTest < ActiveSupport::TestCase
     Organization.any_instance.stubs(:owner_details).returns({})
 
     # Create a real test file to verify it's not moved
-    FileUtils.mkdir_p(@uploads_folder)
     test_file = File.join(@uploads_folder, 'test_file_for_cleanup.tar.xz')
     FileUtils.touch(test_file)
 
@@ -328,7 +327,6 @@ class UploadReportDirectJobTest < ActiveSupport::TestCase
     Setting.stubs(:[]).with(:subscription_connection_enabled).returns(false)
 
     # Create a real test file
-    FileUtils.mkdir_p(@uploads_folder)
     test_file = File.join(@uploads_folder, 'test_file_disconnected.tar.xz')
     FileUtils.touch(test_file)
 
