@@ -52,7 +52,8 @@
           "scalprum",
           "theforeman",
           "tooltip",
-          "unmount"
+          "unmount",
+          "vuln"
         ],
         "minLength": 3
       }
